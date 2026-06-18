@@ -1,0 +1,210 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff8f0;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background-color: #ff69b4;
+  color: white;
+  padding: 20px 0 0 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  color: white;
+  padding-bottom: 10px;
+}
+
+/* Nav */
+nav {
+  background-color: #ff4fa1;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover, nav a:focus {
+  background-color: white;
+  color: #ff4fa1;
+  outline: none;
+}
+
+/* Content */
+.content {
+  max-width: 950px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  min-height: 300px;
+  flex: 1;
+}
+
+.content h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ff4fa1;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s;
+}
+
+.btn:hover { opacity: 0.85; }
+
+.btn-pink   { background: #ff4fa1; color: white; }
+.btn-outline { background: white; color: #ff4fa1; border: 2px solid #ff4fa1; }
+.btn-green  { background: #5cb85c; color: white; }
+.btn-red    { background: #d9534f; color: white; }
+
+/* Forms */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #ff4fa1;
+  outline: none;
+}
+
+/* Alerts */
+.alert {
+  padding: 12px 18px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.alert-success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+.alert-error   { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+
+/* Tables */
+.returns-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.returns-table th {
+  background: #ff4fa1;
+  color: white;
+  padding: 12px 10px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.returns-table td {
+  padding: 11px 10px;
+  border-bottom: 1px solid #f0e0e8;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.returns-table tr:hover td {
+  background: #fff5f9;
+}
+
+/* Status badges */
+.badge {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: white;
+}
+
+.badge-pending  { background: #f0ad4e; }
+.badge-approved { background: #5cb85c; }
+.badge-rejected { background: #d9534f; }
+
+/* Home hero */
+.hero {
+  text-align: center;
+  padding: 30px 0 10px 0;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 28px;
+}
+
+/* Footer */
+footer {
+  background-color: #ff69b4;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: auto;
+  font-weight: 600;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+  nav { flex-direction: column; gap: 10px; }
+  .content { margin: 20px 12px; padding: 18px; }
+  header h1 { font-size: 1.8rem; }
+  .returns-table th, .returns-table td { font-size: 0.85rem; padding: 8px 5px; }
+}
